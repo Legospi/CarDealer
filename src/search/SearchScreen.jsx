@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, StyleSheet } from 'react-native';
 
@@ -5,9 +6,8 @@ const SearchScreen = ({ navigation }) => {
     const [searchText, setSearchText] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
-
     const handleSearch = () => {
-
+   
     };
 
     const handleGoBack = () => {
@@ -17,7 +17,6 @@ const SearchScreen = ({ navigation }) => {
     const renderSearchResultItem = ({ item }) => (
         <View style={styles.searchResultItem}>
             <Text>{item.brand} {item.model}</Text>
-
         </View>
     );
 
@@ -29,13 +28,17 @@ const SearchScreen = ({ navigation }) => {
                 value={searchText}
                 onChangeText={setSearchText}
             />
-            <Button title="Search" onPress={handleSearch} />
+            <View style={styles.buttonContainer}>
+                <Button title="Search" onPress={handleSearch} />
+            </View>
             <FlatList
                 data={searchResults}
                 renderItem={renderSearchResultItem}
                 keyExtractor={(item, index) => index.toString()}
             />
-            <Button title="Regresar" onPress={handleGoBack} />
+            <View style={styles.buttonContainer}>
+                <Button title="Regresar" onPress={handleGoBack} />
+            </View>
         </View>
     );
 };
@@ -43,22 +46,26 @@ const SearchScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20
+        padding: 20,
+        backgroundColor: '#fff',
     },
     searchInput: {
         marginBottom: 20,
         paddingHorizontal: 10,
         borderWidth: 1,
         borderColor: '#ccc',
-        borderRadius: 5
+        borderRadius: 5,
     },
     searchResultItem: {
         marginBottom: 10,
         padding: 10,
         borderWidth: 1,
         borderColor: '#ccc',
-        borderRadius: 5
-    }
+        borderRadius: 5,
+    },
+    buttonContainer: {
+        marginBottom: 10,
+    },
 });
 
 export default SearchScreen;

@@ -1,50 +1,51 @@
 import React from 'react';
-import { View, Text, Button, Image, StyleSheet } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import { View, Text, Image, Button, StyleSheet, ScrollView } from 'react-native';
 
-
-const VehicleDetailsScreen = ({ route, navigation }) => {
+const VehicleDetails = ({ route, navigation }) => {
     const { vehicle } = route.params;
 
-    const handleGoBack = () => {
-        navigation.goBack();
-    };
 
-    const handleViewDetails = (vehicle) => {
-        navigation.navigate('VehicleDetails', { details: vehicle });
-    };
-
+    //Aqui convierto a millares con el toLocaleString
     return (
-        <View style={styles.container}>
-            <Image source={{ uri: vehicle.imageUrl }} style={styles.vehicleImage} />
-            <Text style={styles.title}>{vehicle.make} {vehicle.model}</Text>
-            <Text>Year: {vehicle.year}</Text>
-            <Text>Color: {vehicle.color}</Text>
-            <Text>Kilometers: {vehicle.kilometers}</Text>
-            <Text>Price: ${vehicle.price}</Text>
-            <Button title="Regresar" onPress={handleGoBack} />
-        </View>
+        <ScrollView contentContainerStyle={styles.container}>
+            <Image source={{ uri: vehicle.imageUrl }} style={styles.image} />
+            <Text style={styles.makeModel}>{vehicle.make} {vehicle.model}</Text>
+            <Text style={styles.details}>Año: {vehicle.year}</Text>
+            <Text style={styles.details}>Color: {vehicle.color}</Text>
+            <Text style={styles.details}>Kilometros: {vehicle.kilometers.toLocaleString('es-ES')}</Text> 
+            <Text style={styles.details}>Precio: ${vehicle.price.toLocaleString('es-ES')}</Text>
+            <View style={styles.buttonContainer}>
+                <Button title="Regresar" onPress={() => navigation.goBack()} />
+            </View>
+        </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
+        padding: 16,
         alignItems: 'center',
-        justifyContent: 'center'
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
     },
-    title: {
+    image: {
+        width: '100%',
+        height: 200,
+        borderRadius: 8,
+    },
+    makeModel: {
+        marginTop: 16,
         fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 10
     },
-    vehicleImage: {
-        width: 200,
-        height: 150,
-        marginBottom: 10
-    }
+    details: {
+        marginTop: 8,
+        fontSize: 18,
+    },
+    buttonContainer: {
+        marginTop: 16,
+        width: '100%',
+    },
 });
 
-export default VehicleDetailsScreen;
-
-
+export default VehicleDetails;
