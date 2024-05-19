@@ -27,7 +27,7 @@ const ServiceHistoryScreen = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={{ uri: 'https://previews.123rf.com/images/pekosman/pekosman2307/pekosman230716769/208934877-vector-gráfico-de-carreras-de-autos-deportivos-fondo-abstracto-moderno-con-coche-deportivo.jpg' }}
+            source={{ uri: 'https://files.oaiusercontent.com/file-eCKFzBDibmPnwTh0dU7eMUId?se=2024-05-19T23%3A29%3A29Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D923b7586-bd64-46c4-9be0-3d7eb4827742.webp&sig=sBTMeKfxq0A2CAmVdLrtpYWx4AWzLPNXdiBT4E5gosQ%3D' }}
             style={styles.background}
         >
             <View style={styles.container}>

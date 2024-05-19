@@ -57,7 +57,7 @@ const InventoryScreen = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={{ uri: 'https://previews.123rf.com/images/pekosman/pekosman2307/pekosman230716769/208934877-vector-gr%C3%A1fico-de-carreras-de-autos-deportivos-fondo-abstracto-moderno-con-coche-deportivo.jpg' }}
+            source={{ uri: 'https://files.oaiusercontent.com/file-Aixi2awIdF5zB6kBWRmntDlU?se=2024-05-19T23%3A14%3A07Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D60cb8efc-0be6-4001-b7d0-59df63860ed2.webp&sig=T7Rr/8nv0PiJlc3LaT60WUZ0S0zF5fMu5TAYYFmcqKQ%3D' }}
             style={styles.background}
         >
             <View style={styles.container}>

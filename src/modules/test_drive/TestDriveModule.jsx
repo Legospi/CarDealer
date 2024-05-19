@@ -19,7 +19,7 @@ const TestDriveModule = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={{ uri: 'https://previews.123rf.com/images/pekosman/pekosman2307/pekosman230716769/208934877-vector-gráfico-de-carreras-de-autos-deportivos-fondo-abstracto-moderno-con-coche-deportivo.jpg' }}
+            source={{ uri: 'https://files.oaiusercontent.com/file-GpEpHwqmboSYGqlnM7qXEqx9?se=2024-05-19T23%3A26%3A18Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D911dcc79-ad0b-4325-9e0d-caad740e1167.webp&sig=KjrwIG549256m7tDfdXlW2heZS9/FrkAQInE2kWBLzY%3D' }}
             style={styles.background}
         >
             <View style={styles.container}>

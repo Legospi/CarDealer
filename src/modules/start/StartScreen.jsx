@@ -28,7 +28,7 @@ const StartScreen = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={{uri: 'https://previews.123rf.com/images/pekosman/pekosman2307/pekosman230716769/208934877-vector-gráfico-de-carreras-de-autos-deportivos-fondo-abstracto-moderno-con-coche-deportivo.jpg'}}
+            source={{uri: 'https://files.oaiusercontent.com/file-3faRHHrYoUPyTqGplwVu70Ik?se=2024-05-19T23%3A16%3A25Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D8138a624-4c03-4a98-a716-3203fa5fced1.webp&sig=QYtrUlnYSkipzGDdgR0LvO9tpps8tORlJZoTG25xHHU%3D'}}
             style={styles.container}
         >
             <View style={styles.overlay}>

@@ -19,7 +19,7 @@ const InformationRequestModule = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={{ uri: 'https://previews.123rf.com/images/pekosman/pekosman2307/pekosman230716769/208934877-vector-gráfico-de-carreras-de-autos-deportivos-fondo-abstracto-moderno-con-coche-deportivo.jpg' }}
+            source={{ uri: 'https://files.oaiusercontent.com/file-jZ1C0OkshtlytSL6QZyLHNPe?se=2024-05-19T23%3A30%3A53Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D2bcd6f1c-b4f6-46ce-a812-41040e7795e7.webp&sig=1i8pvJKA7J4F/tALPbnSBhcevg8HC8QGrx/RCZ0S2/g%3D' }}
             style={styles.background}
         >
             <View style={styles.container}>
